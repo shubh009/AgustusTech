@@ -12,3 +12,4 @@ Date: 31 March (Via Whatsapp Group)
 3: Poup is working from all buttons
 4: Validation done on form submission
 5: remove unused element and commented code. 
+6: Delete old .html files.
