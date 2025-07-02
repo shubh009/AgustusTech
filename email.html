@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>EmailJS Form</title>
-        <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>EmailJS Form</title>
+    <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+</head>
 
-    <body>
+<body>
 
-        <form id="contact-form"> <!-- Important: Add method="POST" -->
-            <input type="text" id="name" name="user_name" placeholder="Full Name" value="Shubh" required>
-            <input type="email" id="email" name="user_email" placeholder="Email" value="shubh@web.com" required>
-            <input type="tel" id="contact" name="user_contact" placeholder="Phone Number" value="+1234567890" required>
-            <button type="submit">Send</button>
-        </form>
+    <form id="contact-form" method="POST"> <!-- Important: Add method="POST" -->
+        <input type="text" id="name" name="user_name" placeholder="Full Name" value="Shubh" required>
+        <input type="email" id="email" name="user_email" placeholder="Email" value="shubh@web.com" required>
+        <input type="tel" id="contact" name="user_contact" placeholder="Phone Number" value="+1234567890" required>
+        <button type="submit">Send</button>
+    </form>
 
-        <script>
-            document.addEventListener( 'DOMContentLoaded', function ()
-            {
-                console.log( 'Page Loaded' );
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Page Loaded');
 
-                // Initialize EmailJS
-                emailjs.init( 'U5Of98ZdRy7tPJsvc' ); // Your public key
+            // Initialize EmailJS
+            emailjs.init('U5Of98ZdRy7tPJsvc'); // Your public key
 
-                document.getElementById( 'contact-form' ).addEventListener( 'submit', function ( event )
-                {
-                    event.preventDefault(); // Stop page reload
-                    console.log( 'Form submitted' );
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Stop page reload
+                console.log('Form submitted');
 
-                    var params = {
-                        user_name: document.getElementById( 'name' ).value,
-                        user_email: document.getElementById( 'email' ).value,
-                        user_contact: document.getElementById( 'contact' ).value
-                    };
+                var params = {
+                    user_name: document.getElementById('name').value,
+                    user_email: document.getElementById('email').value,
+                    user_contact: document.getElementById('contact').value
+                };
 
-                    console.log( 'Sending email with params:', params );
+                console.log('Sending email with params:', params);
 
-                    emailjs.send( 'service_l13wmlm', 'template_3w1aevr', params )
-                        .then( function ( response )
-                        {
-                            console.log( 'SUCCESS!', response.status, response.text );
-                            alert( 'Message sent successfully!' );
-                            document.getElementById( 'contact-form' ).reset();
-                        }, function ( error )
-                        {
-                            console.error( 'FAILED...', error );
-                            alert( 'Failed to send message. Please try again later.' );
-                        } );
-                } );
-            } );
-        </script>
+                emailjs.send('service_l13wmlm', 'template_3w1aevr', params)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Message sent successfully!');
+                        document.getElementById('contact-form').reset();
+                    }, function (error) {
+                        console.error('FAILED...', error);
+                        alert('Failed to send message. Please try again later.');
+                    });
+            });
+        });
+    </script>
 
-    </body>
+</body>
 
 </html>
