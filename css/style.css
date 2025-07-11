@@ -398,3 +398,10 @@ html {
 .swiper-button-prev::after {
     display: none !important;
 }
+
+body {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+p, li{
+    font-family: 20px !important;
+}
