@@ -112,7 +112,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 .bg-logo{
-    background-color: rgb(226 237 245);
+    background-color: #e2edf5;
 }
 
 
@@ -360,6 +360,9 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 25px !important;
         line-height: 28px !important;
     }
+    #mobile-menu button {
+      font-size: 16.5px !important;
+       font-family: 'Space Grotesk', sans-serif !important;   }
     
 }
 
@@ -412,4 +415,9 @@ p, li{
 }
 button{
     font-size: 20px !important  ;
+}
+nav button {
+    font-size: 16.5px !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    margin-top: 2px;
 }
