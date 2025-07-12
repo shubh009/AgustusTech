@@ -114,12 +114,8 @@ input[type="number"]::-webkit-outer-spin-button {
 .bg-logo{
     background-color: rgb(226 237 245);
 }
-.hero-section
-{
-    /* background-image: url("/images/coding-bg-2.png"); */
-   
-    z-index: -1111;
-}
+
+
 .v1
 {
     height: 400px !important;
@@ -258,7 +254,7 @@ input[type="number"]::-webkit-outer-spin-button {
     .image-box,
     .reasons-box {
         flex: 1 1 100%;
-        text-align: center;
+        
     }
 
     .section-title {
@@ -356,6 +352,15 @@ input[type="number"]::-webkit-outer-spin-button {
     .cta-content p {
         font-size: 1rem;
     }
+    p, li
+    {
+        font-size: 16px !important;
+    }
+    h2{
+        font-size: 25px !important;
+        line-height: 28px !important;
+    }
+    
 }
 
 html {
@@ -403,5 +408,8 @@ body {
     font-family: 'Space Grotesk', sans-serif !important;
 }
 p, li{
-    font-family: 20px !important;
+    font-size: 18px ;
+}
+button{
+    font-size: 20px !important  ;
 }
