@@ -762,6 +762,72 @@
 </div>
 </div>
 </div>
+
+ <!-- Bottom Mobile Menu -->
+        <!-- Stylish Fixed Bottom Mobile Menu -->
+        <div id="mobileMenu"
+            class="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] bg-blue-200 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-200 z-50 sm:hidden transition-transform duration-300 ease-in-out">
+            <div class="flex justify-between items-center px-4 py-2">
+        
+                <a href="#home"
+                    class="group flex flex-col items-center w-full text-center text-gray-700 hover:text-blue-600 transition">
+                    <div class="bg-gray-200 shadow-md p-2 rounded-full group-hover:scale-110 transition transform">
+                        <i class="ri-home-line text-xl"></i>
+                    </div>
+                    <span class="text-xs mt-1 font-medium">Home</span>
+                </a>
+        
+                <a href="#services"
+                    class="group flex flex-col items-center w-full text-center text-gray-700 hover:text-blue-600 transition">
+                    <div class="bg-gray-200 shadow-md p-2 rounded-full group-hover:scale-110 transition transform">
+                        <i class="ri-service-line text-xl"></i>
+                    </div>
+                    <span class="text-xs mt-1 font-medium">Services</span>
+                </a>
+        
+                <a href="#projects"
+                    class="group flex flex-col items-center w-full text-center text-gray-700 hover:text-blue-600 transition">
+                    <div class="bg-gray-200 shadow-md p-2 rounded-full group-hover:scale-110 transition transform">
+                        <i class="ri-tools-line text-xl"></i>
+                    </div>
+                    <span class="text-xs mt-1 font-medium">Projects</span>
+                </a>
+        
+                <a href="#contact"
+                    class="group flex flex-col items-center w-full text-center text-gray-700 hover:text-blue-600 transition">
+                    <div class="bg-gray-100 shadow-md p-2 rounded-full group-hover:scale-110 transition transform">
+                        <i class="ri-phone-line text-xl"></i>
+                    </div>
+                    <span class="text-xs mt-1 font-medium">Contact</span>
+                </a>
+        
+                <!-- <a href="tel:+1234567890"
+                    class="group flex flex-col items-center w-full text-center text-gray-700 hover:text-blue-600 transition">
+                    <div class="bg-gray-100 shadow-md p-2 rounded-full group-hover:scale-110 transition transform">
+                        <i class="ri-customer-service-2-line text-xl"></i>
+                    </div>
+                    <span class="text-xs mt-1 font-medium">Call</span>
+                </a> -->
+        
+            </div>
+        </div>
+
+<script>
+    const mobileToggle = document.getElementById( "mobile-menu-toggle" );
+    const mobileMenu = document.getElementById( "mobile-menu" );
+
+    mobileToggle.addEventListener( "click", () =>
+    {
+        mobileMenu.classList.toggle( "hidden" );
+    } );
+
+    function toggleSubMenu ( id )
+    {
+        const submenu = document.getElementById( id );
+        submenu.classList.toggle( "hidden" );
+    }
+</script>
+
 <script>
             // Popup functionality
             function showPopup ()
