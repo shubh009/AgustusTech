@@ -28,48 +28,94 @@
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" type="text/javascript"></script>
 </link></meta></meta></meta></meta></meta></head>
 <body class="bg-white">
-<nav class="fixed top-0 left-0 right-0 bg-logo backdrop-blur-md z-50 border-b border-gray-100 shadow-md">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-16">
-<div class="flex items-center">
-<a aria-label="Augustus Tech Systems Home" class="text-2xl font-['Pacifico'] text-primary" href="/" title="Augustus Tech Systems - Software Development Company USA">
-<img alt="Augustus Tech Systems logo" class="h-[55px]" src="/images/augustus-tech-systems-logo.jpeg"/> </a>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a aria-label="About Augustus Tech Systems" class="text-gray-600 hover:text-primary" href="#about" title="Learn more about Augustus Tech Systems">
-                            About
-                        </a>
-<a aria-label="Our Services" class="text-gray-600 hover:text-primary" href="#services" title="Explore our software development services">
+    <header class="bg-[#e2edf5] shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+    
+                <!-- Logo -->
+                <a href="/" class="flex items-center" title="Augustus Tech Systems - Software Development Company USA"
+                    aria-label="Augustus Tech Systems Home">
+                    <img src="/images/augustus-tech-systems-logo.jpeg" alt="Augustus Tech Systems logo" class="h-[55px]" />
+                </a>
+    
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-md font-medium">
+                   
+                    <div class="group relative">
+                        <button class=" flex items-center gap-1 hover:text-blue-600">
                             Services
-                        </a>
-<a aria-label="Portfolio" class="text-gray-600 hover:text-primary" href="#portfolio" title="View our portfolio of software projects">
-                            Portfolio
-                        </a>
-<a aria-label="Blog" class="text-gray-600 hover:text-primary" href="#blog" title="Read our blog articles and insights">
-                            Blog
-                        </a>
-                        <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 whitespace-nowrap cursor-pointer"
-                            title="Get in touch with us" aria-label="Contact Us"">
-                                                    Contact Us
-                                                </button>
-</div>
-<div class="md:hidden flex items-center">
-
-    <div class="md:hidden flex items-center">
-        <button class="text-gray-600 hover:text-primary" 
-              title="Open mobile navigation menu" 
-              aria-label="Open mobile navigation menu">
-            <i class="ri-menu-line text-2xl"></i>
-        </button>
-    </div>
-
-<!-- <button aria-label="Open mobile navigation menu" class="text-gray-600 hover:text-primary" title="Open mobile navigation menu">
-<i class="ri-menu-line text-2xl"></i>
-</button> -->
-</div>
-</div>
-</div>
-</nav>
+                            <i
+                                class="ri-arrow-down-s-line transform transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-5 w-56 bg-[#e2edf5] shadow-lg rounded-b-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Software Development</a>
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Web Development</a>
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Mobile App Development</a>
+                        </div>
+                    </div>
+    
+                    <div class="group relative">
+                        <button class="flex items-center gap-1 hover:text-blue-600">
+                            Industries
+                            <i
+                                class="ri-arrow-down-s-line transform transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-5 w-56 bg-[#e2edf5] shadow-lg shadow-lg rounded-b-md  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Healthcare</a>
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Retail</a>
+                            <a href="#" class="block px-4 py-2 hover:text-blue-600">Finance</a>
+                        </div>
+                    </div>
+    
+                    <a href="#" class="hover:text-blue-600">About Us</a>
+                    <a href="#" class="hover:text-blue-600">Portfolio</a>
+                    <a href="#" class="hover:text-blue-600">Blog</a>
+                    <a href="#" class="hover:text-blue-600">Contact Us</a>
+                </nav>
+    
+                <!-- Mobile Hamburger -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="text-3xl text-blue-600 focus:outline-none">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-[#e2edf5] px-4 py-4 space-y-4  font-medium">
+            <div class="group">
+                <button class="w-full flex justify-between items-center py-2" onclick="toggleSubMenu('services-submenu')">
+                    Services
+                    <i class="ri-arrow-down-s-line transition-transform duration-300 group-[.open]:rotate-180"></i>
+                </button>
+                <div id="services-submenu" class="hidden pl-4 space-y-2">
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Software Development</a>
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Web Development</a>
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Mobile App Development</a>
+                </div>
+            </div>
+    
+            <div class="group">
+                <button class="w-full flex justify-between items-center py-2" onclick="toggleSubMenu('industries-submenu')">
+                    Industries
+                    <i class="ri-arrow-down-s-line transition-transform duration-300 group-[.open]:rotate-180"></i>
+                </button>
+                <div id="industries-submenu" class="hidden pl-4 space-y-2">
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Healthcare</a>
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Retail</a>
+                    <a href="#" class="block py-1 hover:bg-blue-100 rounded">Finance</a>
+                </div>
+            </div>
+    
+            <a href="#" class="block py-1 hover:text-blue-600">About Us</a>
+            <a href="#" class="block py-1 hover:text-blue-600">Portfolio</a>
+            <a href="#" class="block py-1 hover:text-blue-600">Blog</a>
+            <a href="#" class="block py-1 hover:text-blue-600">Contact Us</a>
+        </div>
+    </header>
 <section class="pt-24 pb-16 gradient-bg overflow-hidden">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex flex-col md:flex-row items-center">
